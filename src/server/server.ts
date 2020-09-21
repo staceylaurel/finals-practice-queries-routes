@@ -1,10 +1,11 @@
 import * as express from 'express';
 import * as morgan from 'morgan';
 import * as path from 'path';
+import * as passport from 'passport';
 import routes from './routes';
 
 import './middlewares/passport-strategies';
-import passport from 'passport';
+
 
 const app = express();
 

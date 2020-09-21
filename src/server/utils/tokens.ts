@@ -6,6 +6,6 @@ export interface IPayload {
 }
 
 export const createToken = (payload: IPayload) => {
-	const token = jwt.sign(payload, 'config.auth.secret', { expiresIn: '15d' });
+	const token = jwt.sign(payload, config.auth.secret, { expiresIn: '15d' });
 	return token;
 };

@@ -4,24 +4,24 @@ import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 //component imports
-import Home from "./views/Home";
-import NavBar from "./components/NavBar";
-import Compose from "./views/Compose";
-import Details from "./views/Details";
-import Admin from "./views/Admin";
-import Login from "./views/Login";
-import Profile from "./views/Profile";
-import Register from "./views/Register";
-import PrivateRoute from "./components/PrivateRoute";
-import Donate from "./views/Donate";
-import Contact from "./views/Contact";
+// import Home from "./views/Home";
+// import NavBar from "./components/NavBar";
+// import Compose from "./views/Compose";
+// import Details from "./views/Details";
+// import Admin from "./views/Admin";
+// import Login from "./views/Login";
+// import Profile from "./views/Profile";
+// import Register from "./views/Register";
+// import PrivateRoute from "./components/PrivateRoute";
+// import Donate from "./views/Donate";
+// import Contact from "./views/Contact";
 
 
 
 const App: React.FC<AppProps> = (props) => {
   return (
     <BrowserRouter>
-      <NavBar />
+      {/* <NavBar />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -52,7 +52,7 @@ const App: React.FC<AppProps> = (props) => {
         <Route exact path="/contact">
           <Contact />
         </Route>
-      </Switch>
+      </Switch> */}
     </BrowserRouter>
   );
 };

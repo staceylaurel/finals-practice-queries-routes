@@ -36,15 +36,9 @@ router.get('/:id?', async (req, res) => {
 // POST 
 router.post('/', passport.authenticate("jwt"), async (req: any, res) => {
     try{
-        const newBlog = req.body;
-        // const user = req.user.id;
+        const newBook = req.body;
 
-        const results = await db.books.insert(
-            newBlog.title,
-            // newBlog.author,
-            // newBlog.price,
-            // newBlog.category
-        ); // a whole book    
+        const results = await db.books.insert(newBook); // a whole book    
         res.json(results);
 
     }catch (error) {
@@ -61,10 +55,8 @@ router.put('/:id', passport.authenticate("jwt"), async (req: any, res) => {
         const editedBlog = req.body;
 
         const results = await db.books.update(
-            editedBlog.title,
-            editedBlog.author,
-            // editedBlog.price,
-            // editedBlog.category
+            editedBlog,
+            id
         ); // parts of a book that can be edited 
         res.json(results);
 

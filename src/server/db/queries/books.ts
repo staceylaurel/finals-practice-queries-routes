@@ -1,8 +1,8 @@
 import { Query } from "../index";
 
-const all = () => Query('SELECT books.*, categories.name FROM books JOIN categories on name = books.categoryid');
+const all = () => Query('SELECT books.*, categories.name FROM books JOIN categories ON categoryid = books.categoryid');
 
-const one = (id: number) => Query('SELECT books.*, categories.name FROM books JOIN categories on name = books.categoryid WHERE books.id = ?', [id]);
+const one = (id: number) => Query('SELECT books.*, categories.name FROM books JOIN categories ON categoryid = books.categoryid WHERE books.id = ?', [id]);
 
 const insert = (newBook: {title: string, author: string, price: string, name: string}) => Query('INSERT INTO books SET ?', newBook);
 
